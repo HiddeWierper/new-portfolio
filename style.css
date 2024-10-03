@@ -1,0 +1,164 @@
+:root {
+  --background: linear-gradient(to right, #743ad5, #d53a9d);
+}
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'poppins', sans-serif;
+  background-color: #0F1624;
+  color: #fff;
+}
+
+header{
+  height: 10vh;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+header h1{
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  line-height: 5vh;
+  margin-left: 30%;
+  vertical-align: middle;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+header h1 span{
+  background-image: var(--background);
+  background-clip: text;
+  color: transparent;
+}
+
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-weight: bold;
+}
+nav ul li {
+  position: relative; 
+  margin: 0;
+  padding: 2%;
+  padding-bottom: 1%;
+  transition: 0.3s;
+}
+
+
+nav ul li::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%; 
+  height: 2px; 
+  background-image: var(--background);
+  transition: width 0.5s; 
+}
+
+nav ul li:hover::after {
+  width: 100%; 
+}
+
+nav ul li:hover{
+  transform: translate(0, -5px);
+  padding-bottom: 1.5%;
+  transform: scale(1.1);
+}
+
+div.socials ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+div.socials ul li{
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  font-size: 2rem;
+  color: white;
+}
+
+div.socials ul li i{
+  background-image: var(--background);
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+ div.socials ul li i:hover{
+  transform: translate(0, -5px) scale(1.1);
+  padding-bottom: 1.5%;
+  transition: 0.3s;
+}
+
+section{
+  min-height: 60vh;
+  height: fit-content;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section div.info{
+  width: 80%;
+}
+
+section div.info div.me h1.name{
+  font-size: 4rem;
+  background-image: var(--background);
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 0;
+  
+}
+
+section div.info div.me h1{
+  font-size: 3.3rem;
+  margin-top: 1%;
+  margin-bottom: 1%; 
+}
+
+
+
+section div.info div.me p{
+  font-size: 1rem;
+  margin-top: 0%;
+  color: #929EB0;
+  width: 40%;
+  margin-bottom: 3%;
+}
+
+
+section div.info div.me a{
+  font-family: 'poppins', sans-serif;
+  padding: 1%;
+  border-radius: 25px;
+  background-image: var(--background);
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+section div.info div.me a:hover{
+  transform: translate(0, -2px) scale(1.02);
+
+}
+
+
