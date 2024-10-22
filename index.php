@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +30,7 @@
     </div>
   </header>
 
-  <section>
+  <section class="intro">
     <div class="info">
       <div class="me">
         <h1 class="name">Hello, I'm Hidde,</h1>
@@ -38,6 +39,29 @@
         <a href="files/Hidde-Wierper.pdf" download="CV Hidde Wierper">Download CV</a>      
       </div>
     </div>
+    <div class="imgHw">
+      <span></span>
+      <img src="files/me.jpg" alt="Hidde Wierper">
+    </div>
+  </section>
+
+  <section class="projects">
+    <h1>Projects</h1>
+    <div class="projectContainer">
+      <div class="project">
+        <div class="projectImg">
+            <a href="https://weform.netlify.app" target="_blank">
+          <img src="files/weform.png" alt="weformConsultancy">
+          </a>
+        </div>
+        <div class="projectInfo">
+          <h2><a href="https://www.github.com/hiddewierper"><i class="bi bi-github"></i></a>WeformConsultancy</h2>
+          <p>This is my first project where I learned how to use HTML, CSS, and JS to create a website. I learned how to use flexbox and grid to create a responsive website. I also learned how to use JS to create a hamburger menu.</p>
+          <a class="link" href="https://weform.netlify.app" target="_blank">Watch it here!</a>
+        </div>
+      </div>
+    </div>
+
   </section>
 </body>
 </html>

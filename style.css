@@ -14,8 +14,11 @@ header{
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  position: sticky;
+  top: 0; /* Zorgt ervoor dat de header aan de bovenkant van de viewport blijft plakken */
+  background-color: #0F1624; /* Zorgt ervoor dat de header een achtergrondkleur heeft wanneer deze sticky is */
+  z-index: 1002; /* Zorgt ervoor dat de header boven andere inhoud blijft */
 }
-
 header h1{
   margin: 0;
   padding: 0;
@@ -105,47 +108,52 @@ div.socials ul li i{
   transition: 0.3s;
 }
 
-section{
+
+
+section.intro{
   min-height: 60vh;
-  height: fit-content;
+  height: calc(fit-content + 10vh);
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
 }
 
-section div.info{
-  width: 80%;
+section.intro div.info{
+  width: 40%;
 }
 
-section div.info div.me h1.name{
+section.intro div.info div.me h1.name{
   font-size: 4rem;
   background-image: var(--background);
   background-clip: text;
   color: transparent;
   margin-bottom: 0;
-  
 }
 
-section div.info div.me h1{
+section.intro div.info div.me h1{
   font-size: 3.3rem;
   margin-top: 1%;
   margin-bottom: 1%; 
+  position: relative;
+  z-index: 1001;  
 }
 
 
 
-section div.info div.me p{
+section.intro div.info div.me p{
   font-size: 1rem;
   margin-top: 0%;
   color: #929EB0;
-  width: 40%;
+  width: 60%;
   margin-bottom: 3%;
+  position: relative;
+  z-index: 1001;
 }
 
 
-section div.info div.me a{
+section.intro div.info div.me a{
   font-family: 'poppins', sans-serif;
   padding: 1%;
   border-radius: 25px;
@@ -156,9 +164,135 @@ section div.info div.me a{
   display: inline-block;
 }
 
-section div.info div.me a:hover{
+section.intro div.info div.me a:hover{
   transform: translate(0, -2px) scale(1.02);
 
 }
 
+.imgHw{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 40vh;
+}
+
+.imgHw span{
+  width: 100%;
+  height: 100%; /* Zorgt ervoor dat span de volledige hoogte van .imgHw inneemt */
+  position: relative;
+}
+
+.imgHw span::before, .imgHw span::after, .imgHw img{
+  content: '';
+  position: absolute;
+  width: 390px; /* Behoudt de breedte voor zichtbaarheid */
+  height: 390px; /* Maakt de hoogte gelijk aan de breedte voor een perfecte cirkel */
+  border-radius: 50%; /* Zorgt voor een cirkelvorm */
+  background-color: #929EB0;
+  transform: translate(-50%, -50%);
+}
+.imgHw span::before, .imgHw span::after{
+  content: '';
+  position: absolute;
+  width: 390px;
+  padding: 6px;
+  border-radius: 50%;
+  background: linear-gradient(#0F1624, #0F1624) padding-box, var(--background) border-box;
+  border: 2px solid transparent;
+  box-sizing: border-box;   
+  transform: translate(-50%, -50%);
+} 
+
+.imgHw span::before{
+  width: 600px;
+  height: 600px;
+  left: -3%; 
+  top: 80%;
+}
+
+.imgHw span::after{
+  background: var(--background);
+  border: none;
+  width: 300px;
+  height: 300px;
+  left: 40%; 
+  top: 75%;
+}
+
+.imgHw img{
+  left: 60%;
+  top: 32%;
+  object-fit: cover;
+  filter: grayscale(100%);
+  transform-origin: center;
+  transition: filter 0.3s;
+}
+
+.imgHw img:hover{
+  filter: grayscale(0%);
+}
+
+section.projects{
+  margin-top: 5%;
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+section.projects h1{
+  font-size: 2rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-right: auto;
+  margin-left: 10%;
+  color: white;
+}
+
+.projectContainer{
+  
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.project{
+  border: 1px solid transparent;
+  background-image: linear-gradient(#0F1624, #0F1624), var(--background);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  padding: 1px;
+  margin: 1px;
+  transition: transform 0.3s;
+  width: 100%;
+}
+
+.projectImg img{
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10%;
+  padding-bottom: 0;
+}
+
+.projectInfo{
+  padding: 10%;
+  padding-top: 0;
+}
+
+.projectInfo .link{
+  padding: 3%;
+  background: var(--background);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 100%;
+
+}
+
+.projectInfo .link:hover{
+  transform: translate(0, -2px) scale(1.02);
+}
 
