@@ -166,7 +166,6 @@ section.intro div.info div.me a{
 
 section.intro div.info div.me a:hover{
   transform: translate(0, -2px) scale(1.02);
-
 }
 
 .imgHw{
@@ -256,6 +255,7 @@ section.projects h1{
   
   width: 70%;
   display: grid;
+  gap: 4%;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
@@ -292,7 +292,40 @@ section.projects h1{
 
 }
 
-.projectInfo .link:hover{
-  transform: translate(0, -2px) scale(1.02);
+.projectLang{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  font-size: 2rem;
+  background-image: var(--background);
+  background-clip: text;
+  color: transparent;
+}
+
+.projectLang i{
+  margin: 0 5% 0 5%;
+}
+
+
+section.skills{
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.skillsContainer{
+  width: 70%;
+  display: grid;
+  gap: 4%;
+  grid-template-columns: 1fr;
+}
+
+.skillsContainer span.progress{
+  background-color: var(--background);
+  height: 20px;
 }
 
